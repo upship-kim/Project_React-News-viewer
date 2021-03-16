@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import axios from 'axios';
 import NewsItem from './NewsItem'
-
+import usePromise from '../lib/usePromise';
 
 const NewsListBlock = styled.div`
     box-sizing: border-box;
@@ -20,26 +20,17 @@ const NewsListBlock = styled.div`
 
 
 const NewsList = ({ category}) => {
-    const [articles, setArticles] = useState(null); 
-    const [loading, setLoading] = useState(false);
+    // router 로 구현하기 
+    // const [articles, setArticles] = useState(null); 
+    // const [loading, setLoading] = useState(false);
 
-    useEffect( () => {
-        //async를 사용하는 함수 따로 선언
-        const fetchData = async () => {
-            setLoading(true); 
-            try {
-                console.log('category',category);
-                const query = category === 'all'?'':`&category=${category}`; 
-                const response = await axios.get(
-                    `http://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=87adf8cd864b4d4e914cb9d92302b635`,
-                );
-                setArticles(response.data.articles);
-                
-            } catch (e) {
-                console.log(e);
-            } setLoading(false);
-        };
-        fetchData();    //초기 렌더링 
+    //커스텀 hooks 만들어 구현한기 (usePromise)
+    const [loading, response, error] = usePromise( () => {
+        const query = category === 'all'?'':`&category=${category}`; 
+        return axios.get(
+            `http://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=87adf8cd864b4d4e914cb9d92302b635`,
+        );
+
     }, [category]);
     
     //대기중일때 
@@ -48,11 +39,16 @@ const NewsList = ({ category}) => {
     }
 
     //아직 articles 값이 설정되지 않았을 때 
-    if(!articles) {
+    if(!response) {
         return null;
     }
 
+    if(error) {
+        return <NewsListBlock>에러발생 ! </NewsListBlock>
+    }
+
     //ariticles 값이 유효 할때
+    const { articles } = response.data;
     return (
         <NewsListBlock>
             {articles.map(article => (
