@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://upship-kim.github.io/Project_React-News-viewer/"
+  "proxy": "https://localhost:3000/"
 }
