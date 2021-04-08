@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/adress/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/adress/static/js/main.cc13c519.chunk.js",
-    "main.js.map": "/adress/static/js/main.cc13c519.chunk.js.map",
-    "runtime-main.js": "/adress/static/js/runtime-main.1e46d427.js",
-    "runtime-main.js.map": "/adress/static/js/runtime-main.1e46d427.js.map",
-    "static/js/2.bd060cc6.chunk.js": "/adress/static/js/2.bd060cc6.chunk.js",
-    "static/js/2.bd060cc6.chunk.js.map": "/adress/static/js/2.bd060cc6.chunk.js.map",
-    "static/js/3.1ced978e.chunk.js": "/adress/static/js/3.1ced978e.chunk.js",
-    "static/js/3.1ced978e.chunk.js.map": "/adress/static/js/3.1ced978e.chunk.js.map",
-    "index.html": "/adress/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/adress/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.bd060cc6.chunk.js.LICENSE.txt": "/adress/static/js/2.bd060cc6.chunk.js.LICENSE.txt"
+    "main.css": "/Project_React-News-viewer/adress/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/Project_React-News-viewer/adress/static/js/main.cc13c519.chunk.js",
+    "main.js.map": "/Project_React-News-viewer/adress/static/js/main.cc13c519.chunk.js.map",
+    "runtime-main.js": "/Project_React-News-viewer/adress/static/js/runtime-main.2b1f6338.js",
+    "runtime-main.js.map": "/Project_React-News-viewer/adress/static/js/runtime-main.2b1f6338.js.map",
+    "static/js/2.93449d3f.chunk.js": "/Project_React-News-viewer/adress/static/js/2.93449d3f.chunk.js",
+    "static/js/2.93449d3f.chunk.js.map": "/Project_React-News-viewer/adress/static/js/2.93449d3f.chunk.js.map",
+    "static/js/3.1ced978e.chunk.js": "/Project_React-News-viewer/adress/static/js/3.1ced978e.chunk.js",
+    "static/js/3.1ced978e.chunk.js.map": "/Project_React-News-viewer/adress/static/js/3.1ced978e.chunk.js.map",
+    "index.html": "/Project_React-News-viewer/adress/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/Project_React-News-viewer/adress/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.93449d3f.chunk.js.LICENSE.txt": "/Project_React-News-viewer/adress/static/js/2.93449d3f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1e46d427.js",
-    "static/js/2.bd060cc6.chunk.js",
+    "static/js/runtime-main.2b1f6338.js",
+    "static/js/2.93449d3f.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
     "static/js/main.cc13c519.chunk.js"
   ]
