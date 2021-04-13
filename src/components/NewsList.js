@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 import NewsItem from './NewsItem';
 import usePromise from '../lib/usePromise';
+import { apiKey } from '../config/key';
 
 const NewsListBlock = styled.div`
     box-sizing: border-box;
@@ -26,7 +27,7 @@ const NewsList = ({ category }) => {
     const [loading, response, error] = usePromise(() => {
         const query = category === 'all' ? '' : `&category=${category}`; //아래 주소로 들어가기 위한 query문
         return axios.get(
-            `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=87adf8cd864b4d4e914cb9d92302b635`,
+            `https://newsapi.org/v2/top-headlines?country=kr${query}&${apiKey}`,
         );
     }, [category]);
 
